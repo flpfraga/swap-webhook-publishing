@@ -1,0 +1,63 @@
+{
+  "namespace": "swap.producer.info",
+  "type": "record",
+  "name": "RepositoryInfo",
+  "fields": [
+    {
+      "name": "user",
+      "type": "string"
+    },
+    {
+      "name": "repository",
+      "type": "string"
+    },
+    {
+      "name":"Issues",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "Issue",
+          "fields": [
+            {
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "name": "author",
+              "type": "string"
+            },
+            {
+              "name": "labels",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Contributors",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "Contributor",
+          "fields": [
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "user",
+              "type": "string"
+            },
+            {
+              "name": "qtd_commits",
+              "type": "int"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
