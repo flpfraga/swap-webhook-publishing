@@ -2,8 +2,10 @@ package swap.publisher.webhook.client;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
+/**
+ * Representa a resposta enviada ao webhook com informações de repositório
+ */
 public class WebhookClientResponse {
     private String user;
     private String repository;
